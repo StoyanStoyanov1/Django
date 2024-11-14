@@ -1,13 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from todo_app.models import Task
 
-def my_view(request):
-    return HttpResponse(
-        "<h1>Hello</h1>"
-    )
 
-def add_view(request):
-    return HttpResponse(
-        "<h1>Add</h1>"
-    )
+def index(request):
+    tasks = Task.objects.all()
+
+    context = {
+        'tasks': tasks,
+
+    }
+
+    return render(request, 'tasks/index.html', context)
+
