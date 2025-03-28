@@ -8,35 +8,36 @@
 {% endblock %}
 {% block content %}
     <header id="main-navigation">
-        <h1><a href="">My Blog</a></h1>
+        <h1><a href="" alt="My Blog">My Blog</a></h1>
         <nav>
             <a href="">All Posts</a>
         </nav>
     </header>
     <section id="welcome">
         <header>
-            <img src="" alt="The Author of this blog"/>
+            <img src="{% static 'blog/images/max.png' %}" alt="The Author of this blog"/>
             <h2>My Block</h2>
             <p>Hi, i love to blog about tech and the world!</p>
         </header>
     </section>
     <section id="latest-posts">
-        <h2>My latest thogths</h2>
-
+        <h2>My latest thoughts</h2>
+    
         <ul>
             <li>
                 <article class="post">
-                    <a href="">
-                        <img src="" alt="Mountain Hiking" />
-                        <div class="post__content">
-                            <h3>Mountain Hiking</h3>
-                            <p>There's nothing like the views you get when hiking in the mountains! And i wasn't even prepared for what happened whilst i was enjoying the veiw!</p>
-                        </div>
-                    </a>
-                </article>
+    <a href="">
+        <img src="{% static 'blog/images/mountains.jpg' %}" alt="Scenic view of mountain hiking" />
+        <div class="post__content">
+            <h3>Mountain Hiking</h3>
+            <p>There's nothing like the views you get when hiking in the mountains! And I wasn't even prepared for what happened while I was enjoying the view!</p>
+        </div>
+    </a>
+ </article>
             </li>
         </ul>
     </section>
+    
 
     <section id="about">
         <h2>What i do</h2>
