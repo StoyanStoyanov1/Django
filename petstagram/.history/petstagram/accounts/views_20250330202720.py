@@ -12,14 +12,14 @@ def signin_user(request):
 def signout_user(request):
     return None
 
-def details_profile(request, pk):
+def details_profile(request):
     context = {}
     return render(request, "accounts/profile-details-page.html", context)
 
-def edit_profile(request, pk):
+def edit_profile(request):
     context = {}
     return render(request, "accounts/profile-edit-page.html", context)
 
-def delete_profile(request, pk):
+def delete_profile(request):
     context = {}
     return render(request, "accounts/profile-delete-page.html", context)
