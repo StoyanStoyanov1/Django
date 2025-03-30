@@ -24,7 +24,7 @@
             <a href="#">
               <img
                 width="50px"
-                src="/static/images/free-30-instagram-stories-icons23_122570.png"
+                src="{% static 'images/free-30-instagram-stories-icons23_122570.png' %}"
                 alt="img1"
               />
             </a>
@@ -77,7 +77,7 @@
           <div class="profile_img">
             <div class="image">
               <!-- Profile Image -->
-              <img src="/static/images/person.png" alt="img8" />
+              <img src="{% static 'images/person.png' %}" alt="img8" />
             </div>
           </div>
           <div class="personal">
@@ -90,7 +90,7 @@
               <a href="#">
                 <img
                   class="edit-img"
-                  src="/static/images/edit-pen-icon-6.jpg"
+                  src="{% static 'images/edit-pen-icon-6.jpg' %}"
                   alt="edit button"
                 />
               </a>
@@ -99,7 +99,7 @@
               <a href="">
                 <img
                   class="bin-img"
-                  src="/static/images/icon-remove-22.jpg"
+                  src="{% static 'images/icon-remove-22.jpg' %}"
                   alt="bin button"
                 />
               </a>
@@ -134,7 +134,6 @@
         <div class="pets">
           <div class="statuses">
             <!-- Start 1st Pet Details Page -->
-            <!-- Link to First Pet Details Page -->
             <a href="#">
               <div class="head-pet">
                 <div class="status">
@@ -146,33 +145,28 @@
                     />
                   </div>
                 </div>
-                <!-- Pet Name -->
                 <p>Sasho</p>
               </div>
             </a>
             <!-- End 1st Pet Details Page -->
 
             <!-- Start 2nd Pet Details Page -->
-            <!-- Link to Second Pet Details Page -->
             <a href="#">
               <div class="head-pet">
                 <div class="status">
                   <div class="image">
-                    <!-- Pet Image -->
                     <img
                       src="https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg"
                       alt="pet img"
                     />
                   </div>
                 </div>
-                <!-- Pet Name -->
                 <p>Todi</p>
               </div>
             </a>
             <!-- End 2nd Pet Details Page -->
 
             <!-- Start 3rd Pet Details Page -->
-            <!-- Link to Pet Details Page -->
             <a href="#">
               <div class="head-pet">
                 <div class="status">
@@ -189,7 +183,6 @@
             <!-- End 3rd Pet Details Page -->
 
             <!-- Start 4th Pet Details Page -->
-            <!-- Link to Pet Details Page -->
             <a href="#">
               <div class="head-pet">
                 <div class="status">
@@ -206,7 +199,6 @@
             <!-- End 4th Pet Details Page -->
 
             <!-- Start 5th Pet Details Page -->
-            <!-- Link to Pet Details Page -->
             <a href="#">
               <div class="head-pet">
                 <div class="status">
@@ -223,7 +215,6 @@
             <!-- End 5th Pet Details Page -->
 
             <!-- Start 6th Pet Details Page -->
-            <!-- Link to Pet Details Page -->
             <a href="#">
               <div class="head-pet">
                 <div class="status">
@@ -240,7 +231,6 @@
             <!-- End 6th Pet Details Page -->
 
             <!-- Start 7th Pet Details Page -->
-            <!-- Link to Pet Details Page -->
             <a href="#">
               <div class="head-pet">
                 <div class="status">
@@ -261,36 +251,25 @@
 
         <!-- Start Last Uploaded Photos Section -->
         <div class="pet-photos">
-          <!-- Link to Last Uploaded Pet Photo -->
           <a href="#">
-            <!-- Pet Photo -->
             <img
               src="https://i.natgeofe.com/n/de94c416-6d23-45f5-9708-e8d56289268e/naturepl_01132178.jpg?w=636&h=631"
               alt="pet img"
             />
           </a>
-
-          <!-- Link to Uploaded Pet Photo -->
           <a href="#">
-            <!-- Pet Photo -->
             <img
               src="https://cf.ltkcdn.net/small-pets/images/orig/278587-1600x1066-goldfish-swimming-in-fish-tank.jpg"
               alt="pet img"
             />
           </a>
-
-          <!-- Link to Uploaded Pet Photo -->
           <a href="#">
-            <!-- Pet Photo -->
             <img
               src="https://thumbs.dreamstime.com/b/small-golden-retriever-puppy-6482030.jpg"
               alt="pet img"
             />
           </a>
-
-          <!-- Link to  Uploaded Pet Photo -->
           <a href="#">
-            <!-- Pet Photo -->
             <img
               src="https://i.pinimg.com/originals/4e/55/83/4e5583748bc4000805df50e4ebcafffc.png"
               alt="pet img"
@@ -300,14 +279,12 @@
         <!-- End Last Uploaded Photos Section -->
 
         <!-- IF NO Posts Show No Post Image -->
-
         <img
           class="no-posts"
-          src="/static/images/no_posts.png"
+          src="{% static 'images/no_posts.png' %}"
           alt="no posts"
         />
       </div>
-
       <!-- End Profile Details Section -->
     </main>
     <!-- End Main Section -->

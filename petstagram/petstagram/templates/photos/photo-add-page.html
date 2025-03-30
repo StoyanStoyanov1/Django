@@ -19,7 +19,7 @@
             <div class="logo">
                 <!-- Link to Home Page -->
                 <a href="#">
-                    <img width="50px" src="/static/images/free-30-instagram-stories-icons23_122570.png" alt="img1">
+                    <img width="50px" src="{% static 'images/free-30-instagram-stories-icons23_122570.png' %}" alt="img1">
                 </a>
 
                 <!-- Link to Home Page -->
@@ -81,13 +81,12 @@
             </p>
 
             <p>
-                <label for="id_description">Location:</label>
+                <label for="id_photo_shooting_location">Location:</label>
                 <input type="text" name="photo_shooting_location" maxlength="50" id="id_photo_shooting_location">
             </p>
 
             <p>
-                <label for="pets">Tag Pets:</label>
-
+                <label for="id_tagged_pets">Tag Pets:</label>
                 <select name="pets" id="id_tagged_pets" multiple>
                     <option>Sasho</option>
                     <option>Perry</option>
@@ -106,9 +105,9 @@
 
 <!-- Start Footer Section -->
 <div class="footer">
-		<span class="footer-section">
-			© 2024 SOFTUNI WORKSHOP FOR PYTHON WEB MODULE
-		</span>
+        <span class="footer-section">
+            © 2024 SOFTUNI WORKSHOP FOR PYTHON WEB MODULE
+        </span>
 </div>
 <!-- End Footer Section -->
 
