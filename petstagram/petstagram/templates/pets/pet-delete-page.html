@@ -2,8 +2,9 @@
 <html lang="en">
 <!-- Starts Head Section -->
 <head>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/static/images/free-30-instagram-stories-icons23_122570.png">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/free-30-instagram-stories-icons23_122570.png' %}">
     <title>Petstagram</title>
 </head>
 <!-- End Head Section -->
@@ -18,7 +19,7 @@
             <div class="logo">
                 <!-- Link to Home Page -->
                 <a href="#">
-                    <img width="50px" src="/static/images/free-30-instagram-stories-icons23_122570.png" alt="img1">
+                    <img width="50px" src="{% static 'images/free-30-instagram-stories-icons23_122570.png' %}" alt="img1">
                 </a>
 
                 <!-- Link to Home Page -->
@@ -64,43 +65,114 @@
 
 <!-- Starts Main Section -->
 <main>
-    <!-- Starts Delete Pet Section -->
-    <div class="edit-delete edit-photo">
-        <h2>Delete pet</h2>
-        <!-- Starts Delete Pet Form -->
-        <form action="#">
-            <p>
-                <label for="pet-name">Pet name: </label>
-                <input type="text" placeholder="Name" value="Sasho" disabled>
-            </p>
-            <p>
-                <label for="pet-date">Date of birth: </label>
-                <input type="date" disabled>
-            </p>
-            <p>
-                <label for="pet-image">Link to image: </label>
-                <input type="text" placeholder="Link to image"
-                       value="https://i.natgeofe.com/n/de94c416-6d23-45f5-9708-e8d56289268e/naturepl_01132178.jpg?w=636&h=631"
-                       alt="pet image" disabled>
-            </p>
-            <!-- Delete Pet Button -->
-            <button class="delete-btn" type="submit">Delete</button>
-            <!-- Go Back Button -->
-            <a class="btn btn-primary" href="javascript:history.back()">
-                <button class="edit-btn" type="button">Go back</button>
-            </a>
-        </form>
-        <!-- End Delete Pet Form -->
+    <div class="pet-profile">
+        <!-- Start Pet Personal Data Section -->
+        <div class="profile">
+            <div class="profile-data">
+                <div class="profile_img">
+                    <div class="image">
+                        <!-- Pet URL Image -->
+                        <img src="https://encrypted-tbn0.gstatic.com/static/images?q=tbn:ANd9GcTgoIHq82qLYnvomfz5ZkW5CLQ8VNxCyI-hUw&usqp=CAU" alt="img8">
+                    </div>
+                </div>
+                <div class="personal">
+                    <div class="edit">
+                        <!-- Pet Name -->
+                        <p>Sasho</p>
+                        <!-- Pet Edit Button -->
+                        <a href="">
+                            <img class="edit-img" src="{% static 'images/edit-pen-icon-6.jpg' %}" alt="edit button">
+                        </a>
+                        <!-- Pet Delete Button -->
+                        <a href="">
+                            <img class="bin-img" src="{% static 'images/icon-remove-22.jpg' %}" alt="bin button">
+                        </a>
+                    </div>
+                    <div class="data">
+                        <!-- Pet Total Photos -->
+                        <span>4</span>
+                        <p>photos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Pet Personal Data Section -->
+
+        <div class="pet-posts">
+            <!-- IF Photos Start Pet Photos Post Section -->
+
+            <!-- Start First Pet Photo Post -->
+            <div class="card">
+                <div class="top">
+                    <!-- User Details and image location -->
+                    <div class="userDetails">
+                        <a href="profile details">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src="{% static 'images/person.png' %}" alt="img8">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <h3>
+                            <a href="profile details">Diyan Kalaydzhiev</a>
+                            <br>
+                            <span>Bansko, Bulgaria</span>
+                        </h3>
+                    </div>
+                </div>
+                <!-- Post image -->
+                <div class="imgBx">
+                    <img src="{% static 'images/axolotl.jpeg' %}" alt="post" class="cover">
+                </div>
+
+                <div class="bottom">
+                    <div class="actionBtns">
+                        <div class="left">
+                            <span class="heart">
+                                <a href="#">
+                                    <i class="fa-solid fa-heart" style="color: #ed4040;"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </span>
+                            <a href="share">
+                                <i class="fa-solid fa-share"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <p class="likes">203 likes</p>
+                    </a>
+                    <a href="pet profile">
+                        <p class="message"><b>Sasho</b></p>
+                    </a>
+                    <a href="pet profile">
+                        <p class="message"><b>Some other fish</b></p>
+                    </a>
+                    <a href="post details">
+                        <h4 class="details">See details</h4>
+                    </a>
+                    <h5 class="postTime">19/09/2022</h5>
+                    <div class="addComments">
+                        <form method="post" action="add comment">
+                            <label for="id_body">Body:</label>
+                            <textarea name="body" cols="40" rows="10" placeholder="Add comment..." maxlength="300" required id="id_body"></textarea>
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <img class="no-posts" src="{% static 'images/no_posts.png' %}" alt="no posts image">
+        </div>
     </div>
-    <!-- End Delete Pet Section -->
 </main>
 <!-- End Main Section -->
 
 <!-- Start Footer Section -->
 <div class="footer">
-		<span class="footer-section">
-			© 2024 SOFTUNI WORKSHOP FOR PYTHON WEB MODULE
-		</span>
+    <span class="footer-section">© 2024 SOFTUNI WORKSHOP FOR PYTHON WEB MODULE</span>
 </div>
 <!-- End Footer Section -->
 
