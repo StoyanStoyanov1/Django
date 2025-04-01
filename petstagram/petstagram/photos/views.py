@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 def create_photo(request):
     context = {}
-    return render(request, "photos/create_photo.html", context)
+    return render(request, "photos/photo-add-page.html", context)
 
 def details_photo(request, pk):
     context = {}

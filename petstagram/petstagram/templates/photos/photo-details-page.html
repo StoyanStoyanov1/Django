@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="icon" type="image/x-icon" href="{% static 'images/free-30-instagram-stories-icons23_122570.png' %}">
-    <title>Petstagram</title>
-</head>
-
-<body>
-
-<header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="#">
-                    <img width="50px" src="{% static 'images/free-30-instagram-stories-icons23_122570.png' %}" alt="logo">
-                </a>
-                <a class="home" href="#"><i>Petstagram</i></a>
-            </div>
-
-            <div class="nav-links">
-                <ul class="nav-group">
-                    <li><a href="#"><i>Add Pet</i></a></li>
-                    <li><a href="#"><i>Add Photo</i></a></li>
-                    <li><a href="#"><i>Profile</i></a></li>
-                    <li><a href="#"><i>Log out</i></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<main>
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content%}
     <div class="container">
         <div class="col-9">
             <div class="card">
@@ -110,11 +79,4 @@
             </div>
         </div>
     </div>
-</main>
-
-<div class="footer">
-    <span class="footer-section">© 2024 SOFTUNI WORKSHOP FOR PYTHON WEB MODULE</span>
-</div>
-
-</body>
-</html>
+{% endblock %}
