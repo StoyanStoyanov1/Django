@@ -45,20 +45,20 @@
         </div>
         <p class="likes">203 likes</p>
 
-        {% comment %} {% for pet in photo.pets %}
-        <a href="#">
+        {% for pet in photo.pets.all %}
+        <a href="{% url 'details pet' username='admin' pet_slug=pet.slug %}">
             <p class="message">
-                <b>pet.name</b>
+                <b>{{pet.name}}</b>
             </p>
         </a>
-        {% endfor %} {% endcomment %}
+        {% endfor %}
        
 
-        <a href="#">
+        <a href="{% url 'details photo' pk=photo.pk %}">
             <h4 class="details">See details</h4>
         </a>
 
-        <h5 class="postTime">19/09/2022</h5>
+        <h5 class="postTime">{{ photo.create_at|date:'d/m/Y' }}</h5>
 
         <!-- Start Add Comments Section -->
         <div class="addComments">
@@ -73,5 +73,8 @@
 </div>
 
 >
+
+{% empty %}
+    <img class="no-posts" src="{% static 'images/no_posts.png' %}" alt="no posts image">
+
 {% endfor %}
-<img class="no-posts" src="{% static 'images/no_posts.png' %}" alt="no posts image">
