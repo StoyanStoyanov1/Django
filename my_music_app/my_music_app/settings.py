@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_music_app.web.web',
+    'my_music_app.web',
     'my_music_app.profiles',    
     'my_music_app.albums',
 
