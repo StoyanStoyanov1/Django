@@ -1,33 +1,29 @@
+from django.core.validators import MinValueValidator
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
 
 from my_music_app.profiles.models import Profile
+
+"""
+- Owner
+    - This field should remain hidden in forms.
+"""
+
+
+class Genre(models.TextChoices):
+    GENRE_POP = "Pop Music"
+    GENRE_JAZZ = "Jazz Music"
+    GENRE_ROCK = "Rock Music"
+    GENRE_COUNTRY = "Country Music"
+    GENRE_RNB = "R&B Music"
+    GENRE_DANCE = "Dance Music"
+    GENRE_HIP_HOP = "Hip Hop Music"
+    GENRE_OTHER = "Other"
 
 
 class Album(models.Model):
     MAX_NAME_LENGTH = 30
-    MAX_ARTIS_NAME_LENGTH = 30
+    MAX_ARTIST_NAME_LENGTH = 30
     MAX_GENRE_LENGTH = 30
-
-    GENRE_POP_MUSIC = "Pop Music"
-    GENRE_JAZZ_MUSIC = "Jazz Music"
-    GENRE_ROCK_MUSIC = "Rock Music"
-    GENRE_COUNTRY_MUSIC = "Country Music"
-    GENRE_RNB_MUSIC = "R&B Music"
-    GENRE_DANCE_MUSIC = "Dance Music"
-    GENRE_HIP_HOP_MUSIC = "Hip Hop Music"
-    GENRE_OTHER = "Other"
-
-    GENRES = (
-        (GENRE_POP_MUSIC, GENRE_POP_MUSIC),
-        (GENRE_JAZZ_MUSIC, GENRE_JAZZ_MUSIC),
-        (GENRE_ROCK_MUSIC, GENRE_ROCK_MUSIC),
-        (GENRE_COUNTRY_MUSIC, GENRE_COUNTRY_MUSIC),
-        (GENRE_RNB_MUSIC, GENRE_RNB_MUSIC),
-        (GENRE_DANCE_MUSIC, GENRE_DANCE_MUSIC),
-        (GENRE_HIP_HOP_MUSIC, GENRE_HIP_HOP_MUSIC),
-        (GENRE_OTHER, GENRE_OTHER),
-    )
 
     MIN_PRICE = 0.0
 
@@ -36,17 +32,19 @@ class Album(models.Model):
         unique=True,
         null=False,
         blank=False,
+        verbose_name="Album Name",
     )
 
     artist_name = models.CharField(
-        max_length=MAX_ARTIS_NAME_LENGTH,
+        max_length=MAX_ARTIST_NAME_LENGTH,
         null=False,
         blank=False,
+        verbose_name="Artist",
     )
 
     genre = models.CharField(
         max_length=MAX_GENRE_LENGTH,
-        choices=GENRES,
+        choices=Genre.choices,
         null=False,
         blank=False,
     )
@@ -59,16 +57,18 @@ class Album(models.Model):
     image_url = models.URLField(
         null=False,
         blank=False,
+        verbose_name="Image URL",
     )
 
     price = models.FloatField(
         null=False,
         blank=False,
-        validators=[MinValueValidator(MIN_PRICE)]
+        validators=(
+            MinValueValidator(MIN_PRICE),
+        )
     )
 
     owner = models.ForeignKey(
-        Profile, 
-        on_delete=models.DO_NOTHING,
+        Profile,
+        on_delete=models.CASCADE,
     )
-
