@@ -18,13 +18,13 @@ class Profile(models.Model):
 
     username = models.CharField(
         max_length=MAX_USERNAME_LENGTH,
-        validators=(
+        validators=[
             MinLengthValidator(
                 MIN_USERNAME_LENGTH,
                 message="Username must be at least %(limit_value)d chars long!"
             ),
             validate_username,
-        ),
+        ],
         null=False,
         blank=False,
     )
@@ -38,7 +38,7 @@ class Profile(models.Model):
         null=False,
         blank=False,
         validators=[
-            MinLengthValidator(MIN_AGE),
+            MinValueValidator(MIN_AGE),
         ],
         help_text= f"Age requirement: {MIN_AGE} years and above."
     )
@@ -68,3 +68,9 @@ class Profile(models.Model):
         null=True,
         blank=True,
     )
+
+    def get_full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
+    def __str__(self):
+        return self.get_full_name()
