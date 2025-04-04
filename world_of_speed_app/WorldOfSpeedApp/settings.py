@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'WorldOfSpeedApp.profiles',
     'WorldOfSpeedApp.car',
+    'WorldOfSpeedApp.web',
 ]
 
 MIDDLEWARE = [
