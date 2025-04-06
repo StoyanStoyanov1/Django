@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Starts Head Section -->
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/free-30-instagram-stories-icons23_122570.png' %}">
+    <title>Petstagram</title>
+</head>
+<!-- End Head Section -->
+
+<!-- Starts Body Section -->
+<body>
+
+<!-- Starts Header Section with Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <!-- Link to Home Page -->
+                <a href="{% url 'index' %}">
+                    <img width="50px" src="{% static 'images/free-30-instagram-stories-icons23_122570.png' %}" alt="img1">
+                </a>
+
+                <!-- Link to Home Page -->
+                <a href="{% url 'index' %}">
+                    <i>Petstagram</i>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <li><a href="{% url 'show photos' %}">Photos</a></li>
+                <li><a href="{% url 'create photo' %}">Add Photo</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- End Header Section with Navigation Bar -->
+
+<!-- Starts Main Section -->
+<main>
+    <div class="container">
+        <div class="photos-container">
+            <!-- First Photo with the given image -->
+            <article class="photo-card">
+                <header class="photo-header">
+                    <h4>Photo Title</h4>
+                    <!-- photo of the user -->
+                    <img src="{% static 'images/person.png' %}" alt="profile picture">
+                </header>
+
+                <!-- photo -->
+                <div class="photo">
+                    <img src="{% static 'images/photo1.jpg' %}" alt="photo">
+                </div>
+
+                <!-- photo data -->
+                <div class="photo-details">
+                    <h5>Photo Description</h5>
+                    <!-- photo posted by -->
+                    <p>Posted by: <a href="#">Username</a></p>
+                    <!-- date of the photo -->
+                    <p>Date: 12/10/2022</p>
+                    <!-- number of likes -->
+                    <p>Likes: 21</p>
+                    <!-- Link to Photo Details Page -->
+                    <a href="#" class="details-btn">Details</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+<!-- End Main Section -->
+
+<!-- Starts Footer Section -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Petstagram</h4>
+                <p>Share your pet photos with the world!</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Petstagram. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Section -->
+
+</body>
+</html> 

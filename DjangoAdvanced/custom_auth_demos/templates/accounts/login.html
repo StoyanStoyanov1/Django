@@ -2,7 +2,7 @@
     {{ form.as_p }}
 
     <button>Login</button>
-    or <a href="#">Register</a>
+    or <a href="{% url 'register_user' %}">Register</a>
 
     {% csrf_token %}
 </form>
