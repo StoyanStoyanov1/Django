@@ -19,6 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/DjangoAdvanced/petstagram" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Projects/exam_prep_my_music_app" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Projects/petstagram" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Projects/petstagram/petstagram/petstagram" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.13" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
