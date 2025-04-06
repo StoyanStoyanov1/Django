@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="d4a9a08d-aa5b-46da-a13f-f2ff766fab1f">
+    <data-source source="LOCAL" name="db [2]" uuid="603c2707-f44b-4e7f-82fc-1634caa7bbbf">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Besitzer\Desktop\GitHub\Django\django_course\DjangoAdvanced\custom_auth_demos\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Besitzer\Desktop\GitHub\Django\django_course\petstagram\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
