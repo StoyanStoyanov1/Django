@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.shortcuts import render
 from rest_framework import generics as api_views, serializers
+from rest_framework.authtoken import views as api_token_views
 
 UserModel = get_user_model()
 
@@ -24,7 +25,7 @@ class CreateUserView(api_views.CreateAPIView):
     serializer_class = UserRegisterSerializer
     queryset = UserModel.objects.all()
 
-class LoginAppView:
+class LoginAppView(api_token_views.ObtainAuthToken):
     pass
 
 class LogoutAppView:
