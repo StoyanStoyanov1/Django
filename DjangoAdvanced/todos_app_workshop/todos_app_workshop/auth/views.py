@@ -20,5 +20,11 @@ class UserCreateSerializer(serializers.ModelSerializer):
 class CreateUserApiView(api_views.CreateAPIView):
     serializer_class = UserCreateSerializer
     queryset = get_user_model().objects.all()
-    permission_classes = (permissions.AllowAny,)
+    permission_classes = [permissions.AllowAny]
 
+class LoginApiView(api_token_views.ObtainAuthToken):
+    permission_classes = [permissions.AllowAny]
+
+
+class LogoutApiView:
+    permission_classes = [permissions.IsAuthenticated]
