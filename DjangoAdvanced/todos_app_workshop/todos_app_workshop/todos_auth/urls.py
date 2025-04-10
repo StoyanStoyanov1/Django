@@ -1,6 +1,6 @@
 from django.urls import path
 
-from todos_app_workshop.auth.views import CreateUserApiView, LoginApiView
+from todos_app_workshop.todos_auth.views import CreateUserApiView, LoginApiView
 
 urlpatterns = [
     path("register/", CreateUserApiView.as_view(), name="api_create_user"),
