@@ -7,10 +7,15 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
+    extra_hosts:
+    - "host.docker.internal:host-gateway"
     environment:
-      - POSTGRES_DB=personal_blog_db
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=password
+      - DB_ENGINE=django.db.backends.postgresql
+      - DB_NAME=postgres
+      - DB_USER=admin
+      - DB_PASSWORD=password
+      - DB_HOST=127.0.0.1
+      - DB_PORT=5433
     ports:
       - "5433:5432"
 
